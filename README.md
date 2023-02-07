@@ -9,3 +9,5 @@ FEATURES: Customizable settings for writing/speaking prompts, including the foll
 AWS Services makes it possible to run an actual web server for a super low cost! That's awesome! It was neat to be able to access the server through shell. ssh -i ~/keys/production.pem ubuntu@53.104.2.123 (example of what to do)
 
 AWS Services also makes it possible to purchase a domain name for a cheap price. And I could get any subdomain as welL! This is wonderful! --> Route 53 on AWS, Domains -> Registered Domains, and then Hosted Zones
+
+Look for HTML/CSS/JavaScript things on the web to try new things!
