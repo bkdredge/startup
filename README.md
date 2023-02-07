@@ -11,3 +11,5 @@ AWS Services makes it possible to run an actual web server for a super low cost!
 AWS Services also makes it possible to purchase a domain name for a cheap price. And I could get any subdomain as welL! This is wonderful! --> Route 53 on AWS, Domains -> Registered Domains, and then Hosted Zones
 
 Look for HTML/CSS/JavaScript things on the web to try new things!
+
+Caddy helps with web security. I can use sudo commands to do this!
