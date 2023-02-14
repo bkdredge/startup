@@ -15,3 +15,5 @@ Look for HTML/CSS/JavaScript things on the web to try new things!
 Caddy helps with web security. I can use sudo commands to do this!
 
 Make sure the deploy shell files are in the right repositories. Fork, then clone. Git pull to update local development (Git Bash), nano to open a file, ./ to execute a deploy file. Git push when you're done, and git commit -m "{message}" as well!
+
+CSS Organization is easier with classes (HTML class = ""; CSS .class) and identifiers (HTML id = ""; CSS #id). I can easily find inspiration for animations, and find pngs that have transparency to create interesting parallax effects.
