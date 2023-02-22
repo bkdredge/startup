@@ -19,3 +19,5 @@ Make sure the deploy shell files are in the right repositories. Fork, then clone
 CSS Organization is easier with classes (HTML class = ""; CSS .class) and identifiers (HTML id = ""; CSS #id). I can easily find inspiration for animations, and find pngs that have transparency to create interesting parallax effects.
 
 Use CSS Grid and Flex to assist in page organization. @media can be used to reorganize the page depending on width and height of window resolution.
+
+Make sure to use a command on gitbash like "./deployFiles.sh -k ~/.ssh/production331100.pem -h curemonolingualism.click -s simon" to make changes to your website. Use bootstrap! And incorporate CSS! If possible, try to set aside navigation elements on a separate file so that you don't have to change them so much!
