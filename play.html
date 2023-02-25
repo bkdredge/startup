@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cure Monolingualism</title>
+    <link rel="icon" href="favicon.ico" />
+    <script src="play.js"></script>
+    <link rel="stylesheet" href="play.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" 
+          href=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+          integrity=
+"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+          crossorigin="anonymous">
+    <!-- fontawesome cdn For Icons -->
+    <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+          integrity=
+"sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+          crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href=
+"https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+          integrity=
+"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header>
+      <h1><center>Cure Monolingualism<sup>&reg;</sup></center></h1>
+
+      <!-- Navigation elements -->
+      <nav>
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <menu class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link"href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link"href="play.html">Play</a></li>
+          <li class="nav-item"><a class="nav-link"href="scores.html">Scores</a></li>
+          <li class="nav-item"><a class="nav-link"href="about.html">About</a></li>
+        </menu>
+      </nav>
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      <hr />
+    </header>
+
+    <main>
+      <!-- More formatting with old style HTML -->
+      <br />
+      <div class="options">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Language?</option>
+        <option value="1">Spanish</option>
+        <option value="2">Portuguese</option>
+        <option value="3">French</option>
+        <option value="4">Italian</option>
+        <option value="5">German</option>
+        <option value="6">Russian</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Fluency?</option>
+        <option value="1">Novice</option>
+        <option value="2">Intermediate</option>
+        <option value="3">Advanced</option>
+        <option value="4">Superior</option>
+        <option value="5">Distinguished</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Topic?</option>
+        <option value="1">Anything</option>
+        <option value="2">Weather</option>
+        <option value="3">Sports</option>
+        <option value="4">Business</option>
+        <option value="5">Politics</option>
+        <option value="6">Religion</option>
+        <option value="7">Recreation</option>
+      </select>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Points?</option>
+        <option value="1">100</option>
+        <option value="2">200</option>
+        <option value="3">300</option>
+        <option value="4">400</option>
+        <option value="5">500</option>
+        <option value="6">1000</option>
+        <option value="7">1500</option>
+        <option value="8">2000</option>
+        <option value="9">2500</option>
+        <option value="10">3000</option>
+        <option value="11">5000</option>
+      </select>
+      </div>
+      <br />
+      <div>
+        <center><label for="count">Score</label></center>
+        <center><input type="text" id="count" value="--" readonly /></center>
+      </div>
+      <br />
+
+      <div class="flex-box">
+            <div class="row">
+                <div class="col">
+                    <!-- Adding different buttons for
+                         different functionality-->
+                    <!--onclick attribute is added to give 
+                        button a work to do when it is clicked-->
+                    <button type="button" 
+                            onclick="f1()" 
+                            class=" shadow-sm btn btn-outline-secondary" 
+                            data-toggle="tooltip"
+                            data-placement="top" 
+                            title="Bold Text">
+            Bold</button>
+                    <button type="button" 
+                            onclick="f2()" 
+                            class="shadow-sm btn btn-outline-success" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Italic Text">
+            Italic</button>
+                    <button type="button" 
+                            onclick="f3()" 
+                            class=" shadow-sm btn btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top"
+                            title="Left Align">
+            <i class="fas fa-align-left"></i></button>
+                    <button type="button" 
+                            onclick="f4()" 
+                            class="btn shadow-sm btn-outline-secondary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Center Align">
+            <i class="fas fa-align-center"></i></button>
+                    <button type="button" 
+                            onclick="f5()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Right Align">
+            <i class="fas fa-align-right"></i></button>
+                    <button type="button" 
+                            onclick="f6()" 
+                            class="btn shadow-sm btn-outline-secondary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Uppercase Text">
+            Upper Case</button>
+                    <button type="button" 
+                            onclick="f7()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Lowercase Text">
+            Lower Case</button>
+                    <button type="button" 
+                            onclick="f8()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Capitalize Text">
+            Capitalize</button>
+                    <button type="button" 
+                            onclick="f9()" 
+                            class="btn shadow-sm btn-outline-primary side" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Tooltip on top">
+            Clear Text</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+            </div>
+            <div class="col-md-6 col-sm-9">
+                <div class="flex-box">
+                    <textarea id="textarea1" 
+                              class="input shadow" 
+                              name="name" 
+                              rows="15" 
+                              cols="100" 
+                              placeholder="Your text here ">
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+      
+      <br />
+      <div>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+      </div>
+      <br />
+    </main>
+
+    <footer>
+      <hr />
+      <span class="text-reset">Author Name(s)</span>
+      <br />
+      <a href="https://github.com/bkdredge/startup">Braden Dredge</a>
+    </footer>
+  </body>
+</html>
