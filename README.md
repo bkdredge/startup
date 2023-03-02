@@ -22,3 +22,11 @@ LEARNINGS:
 - Use CSS Grid and Flex to assist in page organization. @media can be used to reorganize the page depending on width and height of window resolution.
 - Make sure to use a command on gitbash like "./deployFiles.sh -k ~/.ssh/production331100.pem -h curemonolingualism.click -s simon" to make changes to your website. Use bootstrap! And incorporate CSS! If possible, try to set aside navigation elements on a separate file so that you don't have to change them so much!
 - Find out how to make new things using W3Schools and Geeks for Geeks.
+- Here are some useful code examples for DOM:
+const el = document.querySelector('.injected');
+el.innerHTML = '<p class="injected"><b>Instructions: </b><ol><li>Choose your options.</li><li>Write according to your prompt</li><li>Submit! And repeat!</li> </p>';
+
+const submitDataEl = document.querySelector('.options');
+submitDataEl.addEventListener('click', function (event) {
+  console.log(event.type);
+});
