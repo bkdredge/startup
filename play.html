@@ -57,6 +57,8 @@
     <main>
       <!-- More formatting with old style HTML -->
       <br />
+      <div class="injected">
+      </div>
       <div class="options">
       <select class="form-select form-select-sm" aria-label=".form-select-sm example">
         <option selected>Language?</option>
@@ -101,9 +103,15 @@
       </select>
       </div>
       <br />
-      <div>
-        <center><label for="count">Score</label></center>
-        <center><input type="text" id="count" value="--" readonly /></center>
+      <div class="prompter">
+        <center><button type="submit" class="btn btn-primary" onclick="generate()">Generate Prompt</button></center>
+      </div>
+      <br />
+      <div id="prompt">
+      </div>
+      <br />
+      <div id = "score">
+        <center><label for="count">Score: 0</label></center>
       </div>
       <br />
 
@@ -175,8 +183,7 @@
                             class="btn shadow-sm btn-outline-primary side" 
                             data-toggle="tooltip" 
                             data-placement="top" 
-                            title="Tooltip on top">
-            Clear Text</button>
+                            title="Tooltip on top">Clear Text</button>
                 </div>
             </div>
         </div>
@@ -186,29 +193,22 @@
             </div>
             <div class="col-md-6 col-sm-9">
                 <div class="flex-box">
-                    <textarea id="textarea1" 
-                              class="input shadow" 
-                              name="name" 
-                              rows="15" 
-                              cols="100" 
-                              placeholder="Your text here ">
-                    </textarea>
+                    <textarea id="textarea1" class="input shadow" name="name" rows="10" cols="100" placeholder="Your text here"></textarea>
                 </div>
             </div>
             <div class="col-md-3">
             </div>
         </div>
-      
       <br />
-      <div>
-        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+      <div id=submit>
+        <center><button type="submit" class="btn btn-primary" onclick = "submit()">Submit</button></center>
       </div>
       <br />
     </main>
 
     <footer>
       <hr />
-      <span class="text-reset">Author Name:</span>
+      <span class="text-reset">Author Name(s)</span>
       <br />
       <a href="https://github.com/bkdredge/startup">Braden Dredge</a>
     </footer>
