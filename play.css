@@ -5,6 +5,10 @@ body {
   padding: 64px;
 }
 
+.injected {
+  flex: 0 30px;
+}
+
 header {
   flex: 0 80px;
 }
