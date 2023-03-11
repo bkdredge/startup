@@ -47,3 +47,31 @@ function f9() {
 	document.getElementById("textarea1").style.textTransform = "capitalize";
 	document.getElementById("textarea1").value = " ";
 }
+
+const el = document.querySelector('.injected');
+el.innerHTML = '<p class="injected"><b>Instructions: </b><ol><li>Choose your options.</li><li>Write according to your prompt</li><li>Submit! And repeat!</li> </p>';
+
+const submitDataEl = document.querySelector('.options');
+submitDataEl.addEventListener('click', function (event) {
+  console.log(event.type);
+});
+
+// remove white space
+function removeTextAreaWhiteSpace() {
+var textarea1 = document.getElementById('textarea1');
+textarea1.value = textarea1.value.replace(/^\s*|\s*$/g,'');
+}
+
+function increaseScore() {
+  var score = document.getElementById('score');
+  var textarea1 = document.getElementById('textarea1');
+  score = 0;
+}
+
+function generate(){
+  document.getElementById("prompt").innerHTML = '<h2>Prompt:</h2><br> <p>Describe your plans for the future in your target language.</p>';
+}
+
+function submit() {
+  document.getElementById("submit").innerHTML = '<center>Do bettah.</center>';
+}
