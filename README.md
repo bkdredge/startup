@@ -987,3 +987,9 @@ console.log('done');
 -   HIPA (mgmt of med records), FERPA, ADA (disabilities), GDPR (protect data)
 - walls
 -   complexity, payment, application failure, security (CAPTCHA), legal walls
+
+[MONGO]
+- It works.
+- It can be checked by putting js files in a convenient place for git to check.
+- Go to MongoDB Atlas and Connect, Connect Your Application, copy "mongodb+srv://bd99:<password>@cluster0.y8vjhmc.mongodb.net/" into the file.
+- SIMON works now!
