@@ -993,3 +993,7 @@ console.log('done');
 - It can be checked by putting js files in a convenient place for git to check.
 - Go to MongoDB Atlas and Connect, Connect Your Application, copy "mongodb+srv://bd99:<password>@cluster0.y8vjhmc.mongodb.net/" into the file.
 - SIMON works now!
+
+[LOGIN]
+- It works.
+- Must include functions in the login HTML CSS JS as well as in other pages as well so it all connects. The databse.js file also must include changes to adapt.
