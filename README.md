@@ -997,3 +997,6 @@ console.log('done');
 [LOGIN]
 - It works.
 - Must include functions in the login HTML CSS JS as well as in other pages as well so it all connects. The databse.js file also must include changes to adapt.
+
+[WEBSOCKET]
+- Change HTML, add peerProxy.js file, and allow other JS files to support the web socket if it is to be inserted.
