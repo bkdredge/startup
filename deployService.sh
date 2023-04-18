@@ -19,9 +19,9 @@ printf "\n----> Deploying $service to $hostname with $key\n"
 printf "\n----> Build the distribution package\n"
 rm -rf dist
 mkdir dist
-###? cp -r public dist
+cp -r public dist
 cp *.js dist
-###? cp package* dist
+cp package* dist
 
 # Step 2
 printf "\n----> Clearing out previous distribution on the target\n"
