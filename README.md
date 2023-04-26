@@ -1000,3 +1000,129 @@ console.log('done');
 
 [WEBSOCKET]
 - Change HTML, add peerProxy.js file, and allow other JS files to support the web socket if it is to be inserted.
+
+[COMPONENTS]
+JSX
+<div>
+  Component: <Demo />
+</div>
+
+React
+function Demo() {
+  const who = 'world';
+  return <b>Hello {who}</b>;
+}
+
+Resulting HTML
+<div>Component: <b>Hello world</b></p>
+
+PROPERTIES
+JSX
+<div>Component: <Demo who="Walke" /><div>
+
+React
+function Demo(props) {
+  return <b>Hello {props.who}</b>;
+}
+
+Resulting HTML
+<div>Component: <b>Hello Walke</b></div>
+
+STATE
+const Clicker = () => {
+  const [clicked, updateClicked] = React.useState(false);
+
+  const onClicked = (e) => {
+    updateClicked(!clicked);
+  };
+
+  return <p onClick={(e) => onClicked(e)}>clicked: {`${clicked}`}</p>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Clicker />);
+
+
+// You can use JSX without a function
+const hello = <div>Hello</div>;
+
+ReactDOM.render(hello, document.getElementById('root'));
+
+[REACT CLI]
+npx create-react-app test-react
+cd test-react
+code .
+npm start
+
+DIRECTORY FILE PURPOSE
+./	.gitignore	Specifies files to not include in your Git commits
+package-json	NPM definition for included packages and script commands
+package-lock.json	Version constraints for included packages (do not edit this)
+README.md	GitHub readme for the project
+./public	index.html	Primary page for the application
+favicon.ico	Primary application icon
+logo*.png	Icons used for mobile devices
+manifest.json	Configuration for use on mobile devices (PWA support)
+robots.txt	Directives for search engine crawlers like Google
+./src	index.js	Entry point for code execution
+index.css	CSS for top level component
+App.css	CSS for the main application component
+App.js	JavaScript for the main application component
+App.test.js	Automated tests for the main application component
+logo.svg	Image displayed in the main application component
+reportWebVitals.js	Configuration for reporting application performance
+setupTests.js	Set up for automated tests
+
+removing testing and performance monitoring
+npm uninstall @testing-library/jest-dom @testing-library/react @testing-library/user-event
+rm src/setupTests.js src/App.test.js
+npm uninstall web-vitals
+rm src/reportWebVitals.js
+
+INDEX.JS
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+// -> Delete
+// import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// -> Delete
+// reportWebVitals();
+
+production release
+npm run build
+
+[ROUTER]
+// Inject the router into the application root DOM element
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  // BrowserRouter component that controls what is rendered
+  // NavLink component captures user navigation requests
+  // Routes component defines what component is routed to
+  <BrowserRouter>
+    <div className='app'>
+      <nav>
+        <NavLink to='/'>Home</Link>
+        <NavLink to='/about'>About</Link>
+        <NavLink to='/users'>Users</Link>
+      </nav>
+
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} exact />
+          <Route path='/about' element={<About />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
+      </main>
+    </div>
+  </BrowserRouter>
+);
